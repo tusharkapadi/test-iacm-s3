@@ -2,7 +2,7 @@ terraform {
     backend "s3" {
         bucket = "migration-demo"
         key = "terraform.tfstate"
-        region = "us-east-1"
+        region = "us-west-2"
     }
 }
 
@@ -11,7 +11,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "app1" {
-    instance_type = var.instance.type
+    instance_type = "t2.micro"
     ami = "ami-0bb7d64eeag57c9a9"
     tags = {
         "team" = "app-team"
