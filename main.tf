@@ -1,7 +1,7 @@
 terraform {
     backend "s3" {
         bucket = "migration-demo"
-        key = "terraform.tfstate"
+        key = "env1/terraform.tfstate"
         region = "us-west-2"
     }
 }
